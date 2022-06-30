@@ -1,0 +1,41 @@
+lamp-shopping-client
+
+lamp-shopping-server
+
+
+npm init -- 노드 초기화
+
+
+react -> es6
+node -> common js
+
+모듈
+1.es6
+export function hello(){
+
+}
+function hello(){
+
+}
+export defalut hello;
+import hello from './hello.js';
+
+2.CommonJS 방식
+1)내보내기 (export)
+function hello(){
+}
+module.exports = hello;
+2)불러오기 (import)
+const hello = require('./hello.js)
+hello();
+
+http status codes
+200 성공
+300 redirection - 다른주소로 요청해라
+400 client error - 클라이언트의 에러
+500 server error - 서버의 에러
+
+익스프레스 설치
+npm install express
+코어스 설치
+npm install cors - 모든브라우저의 요청을 받겠다.(접근성향상)

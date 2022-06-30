@@ -1,0 +1,56 @@
+*state 컴포넌트 내부에서 바뀔 수 있는 값
+-> state가 변경되면 화면을 다시 그림.
+import { useState } from 'react';
+const MyComstate = () => {
+	const [countNum, setCountNum] = useState(0);
+}
+함수형 컴포넌트
+useState import
+const [state, setState] = useState(초기값);
+
+class형 컴포넌트
+state 접근 this.state
+state 변경 this.setState({})
+class MyComstate extends Component {
+	constructor(){
+		this.state ={
+			countNum : 0,
+		}
+	}
+	render() {
+		const {countNum} = this.state;
+		return(
+			<div>
+				<h1>{countNum}</h1>
+				<button onClick= ()=>{
+					this.setState({countNum: countNum+1})
+				}>+1</button>
+			</div>
+		)
+	}
+}
+
+
+
+ref (reference) : DOM에 이름달기
+1.클래스형 컴포넌트
+1)ref객체 생성
+const input = React.createRef();
+2)DOM요소 ref속성으로 지정
+<input ref={this.input} />
+3)DOM요소 접근
+this.input.current
+
+2.함수형 컴포넌트
+1)useRef 임폴트
+import { useRef } from 'react';
+2)ref 객체
+const input = useRef();
+3)DOM요소 지정
+<input ref={input} />
+4)DOM요소 접근
+input.current
+
+배열다루기
+1.배열에 항목을 추가하기
+CreateUser.js

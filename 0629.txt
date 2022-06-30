@@ -1,0 +1,9 @@
+설치할 라이브러리
+sass
+yarn add node-sass
+antd
+npm install antd
+axios
+npm install axios /yarn add axios
+react-router-dom
+npm install react-router-dom
